@@ -4,14 +4,18 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "capistrano-notification"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "ursm@ursm.jp"
-    gem.homepage = "http://github.com/ursm/capistrano-notification"
-    gem.authors = ["Keita Urashima"]
-    gem.add_development_dependency "rspec", ">= 1.2.9"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.name = 'capistrano-notification'
+    gem.summary = %Q{Capistrano deployment notification}
+    gem.description = %Q{Capistrano deployment notification}
+    gem.email = 'ursm@ursm.jp'
+    gem.homepage = 'http://github.com/ursm/capistrano-notification'
+    gem.authors = ['Keita Urashima']
+
+    gem.add_dependency 'capistrano'
+    gem.add_dependency 'validatable'
+    gem.add_dependency 'shout-bot'
+
+    gem.add_development_dependency 'rspec', '>= 1.2.9'
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
