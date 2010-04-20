@@ -32,10 +32,12 @@ module CapistranoNotification
       end
     end
 
-    def initialize(vars = {})
+    def initialize(vars = {}, &block)
       vars.each do |k, v|
         send k, v
       end
+
+      block.call(self) if block
     end
 
     validates_presence_of :name
@@ -61,8 +63,8 @@ module CapistranoNotification
     end
   end
 
-  def irc(opts)
-    add IRC.new(opts)
+  def irc(opts = {}, &block)
+    add IRC.new(opts, &block)
   end
 
   def add(notification)
