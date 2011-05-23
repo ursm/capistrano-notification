@@ -54,6 +54,16 @@ module CapistranoNotification
           end
         end
       end
+
+      describe "pass via block" do
+        subject do
+          base_subclass_instance do
+            var :name
+          end
+        end
+        before { subject.name{ "pass_via_block" } }
+        its(:name) { should == "pass_via_block" }
+      end
     end
   end
 end
