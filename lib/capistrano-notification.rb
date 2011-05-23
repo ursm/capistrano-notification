@@ -1,3 +1,4 @@
+require 'capistrano'
 require 'validatable'
 require 'shout-bot'
 
