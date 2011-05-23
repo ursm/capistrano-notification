@@ -1,3 +1,11 @@
+PATH
+  remote: .
+  specs:
+    capistrano-notification (0.1.0)
+      capistrano
+      shout-bot
+      validatable
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -9,12 +17,7 @@ GEM
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
     diff-lcs (1.1.2)
-    git (1.2.5)
     highline (1.6.2)
-    jeweler (1.6.0)
-      bundler (~> 1.0.0)
-      git (>= 1.2.5)
-      rake
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -22,8 +25,6 @@ GEM
     net-ssh (2.1.4)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
-    rake (0.8.7)
-    rcov (0.9.9)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -40,10 +41,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano
-  jeweler
-  rake
-  rcov
+  capistrano-notification!
   rspec
-  shout-bot
-  validatable
