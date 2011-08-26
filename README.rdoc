@@ -1,6 +1,17 @@
 = capistrano-notification
 
-Description goes here.
+This allow to notify the end of the deployment on IRC.
+
+== Usage
+
+  require 'capistrano-notification'
+
+  notification.irc do |irc|
+    irc.host    'chat.freenode.net'
+    irc.channel '#rubykaigi.org'
+    irc.message { "#{local_user} deployed #{application} to #{deploy_target}" }
+  end
+
 
 == Note on Patches/Pull Requests
  
