@@ -55,10 +55,11 @@ module CapistranoNotification
     var :host, :required => true
     var :port, :required => true, :default => 6667
     var :channel, :required => true
+    var :channel_password
     var :message, :required => true
 
     def run
-      ShoutBot.shout("irc://#{login}@#{host}:#{port}/#{channel}") do |channel|
+      ShoutBot.shout("irc://#{login}@#{host}:#{port}/#{channel}", channel_password) do |channel|
         channel.say message
       end
     end
