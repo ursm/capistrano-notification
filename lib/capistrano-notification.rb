@@ -1,6 +1,6 @@
 require 'capistrano'
 require 'validatable'
-require 'shout-bot'
+require 'lib/shout-bot'
 
 module CapistranoNotification
   def self.extended(config)
